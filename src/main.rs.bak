@@ -1,0 +1,18 @@
+use reqwest;
+use std::error::Error;
+
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn Error>> {
+	let params = [("username", "sardar_dsl"), ("password", "wnpl123")];
+    let client = reqwest::Client::new();
+    let res = client.post("http://2.2.2.2/login")
+        .header("Content-Type", "application/x-www-form-urlencoded")
+        .form(&params)
+        .send()
+        .await?
+        .text()
+        .await?;
+    println!("{:?}", res);
+    Ok(())
+}
