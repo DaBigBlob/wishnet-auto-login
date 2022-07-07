@@ -1,8 +1,5 @@
 use reqwest;
 use std::error::Error;
-use ansi_term::Colour;
-use ansi_term::Style;
-
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
