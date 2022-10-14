@@ -3,7 +3,7 @@ use std::error::Error;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
-	let params = [("username", "sardar_dsl"), ("password", "wnpl123")];// replace sardar_dsl and wnpl123 with your own stuf
+	let params = [("username", "nigle_dsl"), ("password", "wnpl123")];// replace sardar_dsl and wnpl123 with your own stuf
     let client = reqwest::Client::new();
     let response = client.post("http://2.2.2.2/login")
         .header("Content-Type", "application/x-www-form-urlencoded")
